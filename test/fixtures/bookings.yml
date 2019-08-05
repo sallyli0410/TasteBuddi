@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: false
+  date: 2019-08-05
+  time: 2019-08-05 15:23:23
+  user: one
+  product: one
+
+two:
+  status: false
+  date: 2019-08-05
+  time: 2019-08-05 15:23:23
+  user: two
+  product: two

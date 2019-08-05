@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wx_id: MyString
+  wx_name: MyString
+  wx_avatar: MyString
+  phone_number: MyString
+  seller_complete: false
+
+two:
+  wx_id: MyString
+  wx_name: MyString
+  wx_avatar: MyString
+  phone_number: MyString
+  seller_complete: false
