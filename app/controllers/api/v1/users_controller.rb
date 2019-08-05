@@ -2,14 +2,14 @@ class Api::V1::UsersController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token
 
   def show
-    @users = User.find(parmas[:id])
+    @user = User.find(params[:id])
     @product = @user.products
     @bookings = @user.bookings
-    @reviews = @users.reviews
+    @requests = Booking.joins(:product).where('product.user_id = ?', params[:id])
   end
 
   def create
-    @user = Users.create(users_params)
+    @user = Users.create(user_params)
     if @user.save
       render :show, :created
     else
