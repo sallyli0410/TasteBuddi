@@ -7,6 +7,8 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def show
+    @seller = @product.user
+    @ingredients = @product.ingredients
   end
 
   def update
