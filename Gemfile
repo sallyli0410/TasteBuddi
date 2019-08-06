@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'acts_as_favoritor', github: 'jonhue/acts_as_favoritor'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
