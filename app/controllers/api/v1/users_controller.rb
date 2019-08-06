@@ -19,6 +19,16 @@ class Api::V1::UsersController < Api::V1::BaseController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      render :show
+    else
+      render_error
+    end
+  end
+
 private
 
   def user_params
