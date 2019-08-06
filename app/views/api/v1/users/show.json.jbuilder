@@ -11,7 +11,7 @@ json.bookings @user.bookings do |booking|
   json.booked_time booking.time
   # product, buyer, seller
   json.buyer_name booking.user.wx_name
-  json.product_name booking.product.wx_name
+  json.product_name booking.product.name
   json.seller_name booking.product.user.wx_name
   # status and completedness
   json.status booking.status

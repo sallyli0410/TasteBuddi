@@ -1,9 +1,9 @@
-json.extract! @product, :id, :name, :description, :location_long, :location_long, :user_id
+json.extract! @product, :id, :name, :description, :location_lat, :location_long, :user_id
 
 # seller info
 json.seller do
-  json.name @seller.wx_name
-  json.avatar @seller.wx_avatar
+  json.name @product.user.wx_name
+  json.avatar @product.user.wx_avatar
   json.phone @phone_number
 end
 
