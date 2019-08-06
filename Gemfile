@@ -33,6 +33,8 @@ gem 'acts_as_favoritor', github: 'jonhue/acts_as_favoritor'
 
 # for wechat login
 gem 'rest-client'
+# gem for env
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
