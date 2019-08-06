@@ -32,6 +32,9 @@ class Api::V1::ProductsController < Api::V1::BaseController
     head :no_content
   end
 
+  def tagged
+  end
+
   private
 
   def set_product
@@ -39,7 +42,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :location_lat, :location_long, :user_id, :img_url)
+    params.require(:product).permit(:name, :description, :location_lat, :location_long, :user_id, :img_url, :tag_list)
   end
 
   def render_error
