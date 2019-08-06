@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_025709) do
+ActiveRecord::Schema.define(version: 2019_08_06_044420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.boolean "status"
-    t.date "date"
-    t.time "time"
     t.bigint "user_id"
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "completed"
+    t.datetime "time"
+    t.string "status"
     t.index ["product_id"], name: "index_bookings_on_product_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -39,12 +38,12 @@ ActiveRecord::Schema.define(version: 2019_08_06_025709) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "location_lat"
-    t.string "location_long"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "img_url"
+    t.float "location_lat"
+    t.float "location_long"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
