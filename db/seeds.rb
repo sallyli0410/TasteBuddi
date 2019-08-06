@@ -1,67 +1,36 @@
 require 'date'
 
-
 Booking.destroy_all
 Product.destroy_all
 User.destroy_all
+p 'Destroyed everything'
 
-
-# <------------------Create Users------------------->
-puts "creating users"
-
-5.times do
-  User.create(
-    wx_name: Faker::Name.unique.name,
-    wx_avatar: "",
-    phone_number: Faker::Number.number(digits: 11),
-    seller_complete: :true,
-    )
-  end
-
-puts "finished creating users"
-# <------------------Create Products------------------->
-
-puts "Creating products"
-
-product_attributes = [
-
+products = [
   {
     name:'Kale Pesto sauce',
     image: 'https://images.unsplash.com/photo-1519623286359-e9f3cbef015b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
     description: 'Home made fresh kale pesto',
-
-    location_lat: 31.22184, #review wx choose location
-    location_long: 121.439884, #review wx choose location
-    rating: 3,
-    user_id: User.last,
-
+    location_lat: 30.0,
+    location_long: 30.0
   },
   {
     name: 'Malaysia Sambal Sauce',
     image: "http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg",
     description: 'Authentic Malaysian spicy sambal sauce',
-
-    location_lat: 31.22184, #review wx choose location
-    location_long: 121.439884, #review wx choose location
-    rating: 5,
-    user_id: User.last,
-
+    location_lat: 0.3,
+    location_long: 60.9
   },
   {
     name: 'Kumquat Chilli Chuntney',
     image: "https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/2014-r-xl-kumquat-and-pineapple-chutney.jpg?itok=-S4ebOu-",
     description: 'Delicous Sweet and Spicy kumquat, lime and chilli chuntney',
-
-    location_lat: 31.22184, #review wx choose location
-    location_long: 121.439884, #review wx choose location
-    rating: 5,
-    user_id: User.last,
-
+    location_lat: 10.9,
+    location_long: 51.8
   }
 ]
 
 3.times do
-  #create sellers
+  # create sellers
   u = User.create(
     wx_name: Faker::Name.unique.name,
     wx_avatar: "",
@@ -94,12 +63,3 @@ end
 p User.all
 p Product.all
 p Booking.all
-# 5.times do
-#   Booking.create(
-#     status: false,
-#     date: Date.today + (0..5).to_a.sample,
-#     time: rand(5) + 16, # [16, 20]
-#     product: Product.sample
-#     # user: ?
-#   )
-# end
