@@ -3,5 +3,5 @@ class Booking < ApplicationRecord
   belongs_to :product
 
   # validations
-  validates :user, :product, :date, :time, :status, presence: true
+  validates :user, :product, :time, :status, presence: true
 end
