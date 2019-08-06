@@ -7,7 +7,6 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def show
-    @seller = @product.user
     @ingredients = @product.ingredients
   end
 
@@ -43,11 +42,11 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :location_lat, :location_long, :user_id, :tag_list)
+    params.require(:product).permit(:name, :description, :location_lat, :location_long, :user_id, :img_url, :tag_list)
   end
 
   def render_error
-    render json: { errors: @game.errors.full_messages },
+    render json: { errors: @product.errors.full_messages },
       status: :unprocessable_entity
   end
 end

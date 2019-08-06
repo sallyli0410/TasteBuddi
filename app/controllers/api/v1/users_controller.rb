@@ -8,10 +8,13 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def create
-    @user = Users.create(user_params)
+    p 'creating a user...'
+    @user = User.create(user_params)
     if @user.save
-      render :show, :created
+      p 'saved'
+      render :show, status: :created
     else
+      p 'cannot save'
       render_error
     end
   end
