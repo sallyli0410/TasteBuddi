@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/jonhue/acts_as_favoritor.git
+  revision: 862bb61bca40e36a0eb7f6f4a5f627fabffdf7a4
+  specs:
+    acts_as_favoritor (4.0.2)
+      activerecord (>= 5.0)
+
+GIT
   remote: https://github.com/stympy/faker.git
   revision: 0deec175348ca756082f65349c32e967ff8ef6c5
   branch: master
@@ -202,6 +209,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
+  acts_as_favoritor!
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
