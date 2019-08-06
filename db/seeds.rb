@@ -60,6 +60,9 @@ end
   )
 end
 
+
+
+
 p User.all
 p Product.all
 p Booking.all
