@@ -1,4 +1,4 @@
-class Api::V1::BookingsController < Api::V1::BaseController
+class Api::V1::ProductsController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_product, only: [:show, :update, :destroy]
 

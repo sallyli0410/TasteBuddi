@@ -3,9 +3,8 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def show
     @user = User.find(params[:id])
-    @product = @user.products
     @bookings = @user.bookings
-    @requests = Booking.joins(:product).where('product.user_id = ?', params[:id])
+    @requests = Booking.joins(:product).where('products.user_id = ?', params[:id])
   end
 
   def create

@@ -31,7 +31,7 @@ private
   end
 
   def booking_params
-    params.require(:booking).permit(:status, :completed, :date, :time, :user_id, :product_id)
+    params.require(:booking).permit(:status, :completed, :time, :user_id, :product_id)
   end
 
   def render_error
