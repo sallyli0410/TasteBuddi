@@ -1,5 +1,5 @@
 FROM ruby:2.6.3
-​
+
 # Install NodeJS and Yarn
 RUN apt-get update
 RUN apt-get -y install curl
