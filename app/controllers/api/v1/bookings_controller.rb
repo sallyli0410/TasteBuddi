@@ -10,7 +10,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
   def create
     @booking = Booking.new(booking_params)
       if @booking.save
-        render :show, status: :created
+        # render :show, status: :created
       else
         render_error
       end
@@ -19,15 +19,16 @@ class Api::V1::BookingsController < Api::V1::BaseController
   # Seller can update a booking status
   def update
     if @booking.update(booking_params)
-      render :show
+      # render :show
     else
       render_error
+    end
   end
 
 private
 
-  def set_bookings
-    @booking = Bookings.find(params[:id])
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
@@ -39,4 +40,3 @@ private
     status: :unprocessable_entity
   end
 end
-

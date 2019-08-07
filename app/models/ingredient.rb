@@ -2,5 +2,5 @@ class Ingredient < ApplicationRecord
   belongs_to :product
 
   # validations
-  validates :name, :product, :quantity, presence: true
+  validates :name, :product, presence: true
 end
