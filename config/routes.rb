@@ -7,7 +7,8 @@ Rails.application.routes.draw do
         resources :ingredients, only: [:create, :update, :destroy]
       end
       resources :users, only: [:show, :create, :update] do
-        resources :bookings, only: [:create, :update]
+        resources :bookings, only: [:index, :create, :update]
+
       end
     end
   end
