@@ -3,7 +3,6 @@ class Api::V1::UsersController < Api::V1::BaseController
   before_action :set_user, only: [:show, :update]
 
   def show
-    # @user = User.find(params[:id])
     @bookings = @user.bookings
     @requests = Booking.joins(:product).where('products.user_id = ?', params[:id])
   end
@@ -21,17 +20,8 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def update
-    @user = User.find(params[:id])
     @user.update(user_params)
     if @user.save
-      render :show
-    else
-      render_error
-    end
-  end
-
-  def update
-    if @user.update(user_params)
       render :show
     else
       render_error
