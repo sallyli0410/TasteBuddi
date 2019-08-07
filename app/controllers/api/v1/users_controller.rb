@@ -19,8 +19,9 @@ class Api::V1::UsersController < Api::V1::BaseController
     end
   end
 
-   def update
-    if @user.update(user_params)
+  def update
+    @user.update(user_params)
+    if @user.save
       render :show
     else
       render_error

@@ -2,8 +2,14 @@ class Api::V1::ProductsController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_product, only: [:show, :update, :destroy]
 
+  # /api/v1/products?tag=sweet
   def index
-    @products = Product.all
+    if params[:tag].present?
+      puts params[:tag]
+      @products = Product.tagged_with(params[:tag])
+    else
+      @products = Product.all
+    end
   end
 
   def show
@@ -19,7 +25,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def create
-    @product = Product.create(product_params)
+    @product = Product.new(product_params)
     if @product.save
       render :show, status: :created
     else
@@ -30,9 +36,6 @@ class Api::V1::ProductsController < Api::V1::BaseController
   def destroy
     @product.destroy
     head :no_content
-  end
-
-  def tagged
   end
 
   private
