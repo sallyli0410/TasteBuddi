@@ -1,4 +1,4 @@
-json.extract! @product, :id, :name, :description, :location_lat, :location_long, :user_id
+json.extract! @product, :id, :name, :description, :location_lat, :location_long, :user_id, :img_url
 
 # seller info
 json.seller do
