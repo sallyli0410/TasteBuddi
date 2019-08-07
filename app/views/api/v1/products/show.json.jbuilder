@@ -8,6 +8,12 @@ json.seller do
 end
 
 # average rating?
+sum = 0
+@product.reviews.each do |review|
+  sum += review.rating
+end
+avg = sum.to_f / @product.reviews.size.to_f
+json.avg_rating avg
 
 # reviews
 json.reviews @product.reviews do |review|
@@ -15,10 +21,10 @@ json.reviews @product.reviews do |review|
   json.content review.content
   json.rating review.rating
 
-  # buyer info
-  json.buyer_name review.user.wx_name
-  json.buyer_name review.user.wx_avatar
-  json.buyer_name review.user.wx_id
+  # reviewer info
+  json.reviewer_wx_name review.user.wx_name
+  json.reviewer_wx_avatar review.user.wx_avatar
+  json.reviewer_wx_id review.user.wx_id
 end
 
 # ingredients

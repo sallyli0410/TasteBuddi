@@ -38,7 +38,6 @@ class Api::V1::ProductsController < Api::V1::BaseController
     head :no_content
   end
 
-
   private
 
   def set_product
