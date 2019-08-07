@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       post '/login', to: 'login#login', as: :login
       resources :products, only: [:index, :show, :create, :update, :destroy] do
         resources :reviews, only: [:create, :update, :destroy]
+        resources :ingredients, only: [:create, :update, :destroy]
       end
       resources :users, only: [:show, :create, :update] do
         resources :bookings, only: [:create, :update]
