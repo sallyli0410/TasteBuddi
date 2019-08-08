@@ -78,7 +78,7 @@ products = [
   }
 ]
 
-3.times do
+10.times do
   # create sellers
   u = User.create(
     wx_name: Faker::Name.unique.name,
@@ -87,6 +87,7 @@ products = [
     seller_complete: true
   )
   # for each seller, create products
+
   p_info = products.sample
   pro = Product.create(name: p_info[:name], description: p_info[:description], img_url: p_info[:image], location_long: p_info[:location_long], location_lat: p_info[:location_lat], user: u)
 end
