@@ -7,12 +7,17 @@ end
 
 # for bookings
 json.bookings @user.bookings do |booking|
-  json.id booking.id
+  json.booking_id booking.id
   json.booked_time booking.time
   # product, buyer, seller
-  json.buyer_name booking.user.wx_name
   json.product_name booking.product.name
+  json.product_id booking.product.id
+  json.product_img booking.product.img_url
+
   json.seller_name booking.product.user.wx_name
+  json.seller_avatar booking.product.user.wx_avatar
+  json.seller_wx_id booking.product.user.wx_id
+  json.seller_id booking.product.user.id
   # status and completedness
   json.status booking.status
   json.complete booking.completed
