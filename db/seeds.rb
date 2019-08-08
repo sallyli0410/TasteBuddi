@@ -1,6 +1,7 @@
 require 'date'
 
 Booking.destroy_all
+Ingredient.destroy_all
 Product.destroy_all
 User.destroy_all
 p 'Destroyed everything'
