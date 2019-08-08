@@ -11,7 +11,7 @@ products = [
     name:'Kale Pesto sauce',
     image: 'https://images.unsplash.com/photo-1519623286359-e9f3cbef015b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
     description: 'Home made fresh kale pesto with fresh mint',
-    avg_rating: 3,
+    avg_rating:2,
     location_lat: 30.0,
     location_long: 119,
     ingredients: ['basil', 'kale', 'olive oil']
@@ -20,7 +20,8 @@ products = [
     name: 'Malaysia Sambal Sauce',
     image: "http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg",
     description: 'Authentic Malaysian spicy sambal sauce',
-    avg_rating: 4,
+
+    avg_rating:3,
     location_lat: 30.3,
     location_long: 119,
     ingredients: ['chilies', 'garlic', 'lemongrass', 'shallots', 'ginger']
@@ -29,7 +30,7 @@ products = [
     name: 'Kumquat Chilli Chuntney',
     image: "https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/2014-r-xl-kumquat-and-pineapple-chutney.jpg?itok=-S4ebOu-",
     description: 'Delicous Sweet and Spicy kumquat, lime and chilli chuntney',
-    avg_rating: 5,
+    avg_rating:4,
     location_lat: 30.9,
     location_long: 118,
     ingredients: ['orange juice', 'cranberry', 'cinnamon', 'cloves']
@@ -56,7 +57,7 @@ products = [
     name: 'Thai Sweet Chili Sauce',
     image: "http://www.chocolatemoosey.com/wp-content/uploads/2012/09/Sweet-Chili-Sauce-8973.jpg",
     description: 'Thai family recipe for sweet chilli sauce',
-    avg_rating: 5,
+    avg_rating:3,
     location_lat: 34.9,
     location_long: 118.8,
     ingredients: ['white sugar', 'chilies', 'garlic', 'salt']
