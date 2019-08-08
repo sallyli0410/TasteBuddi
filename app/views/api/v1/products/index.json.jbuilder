@@ -4,6 +4,8 @@ json.products do
     json.seller_name product.user.wx_name
     json.seller_avatar product.user.wx_avatar
 
+    json.tags product.tag_list
+
     # average rating
     sum = 0
     product.reviews.each do |review|
