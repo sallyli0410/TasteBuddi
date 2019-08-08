@@ -4,12 +4,22 @@ class Api::V1::ProductsController < Api::V1::BaseController
 
   # /api/v1/products?tag=sweet
   def index
-    if params[:tag].present?
-      puts params[:tag]
-      @products = Product.tagged_with(params[:tag])
+    if params[:query].present?
+      sql_query = "
+        products.name @@ :query \
+        OR products.description @@ :query \
+        OR ingredients.name @@ :query
+      "
+      @products = Product.joins(:ingredients).where(sql_query, query: "%#{params[:query]}%").distinct
     else
       @products = Product.all
     end
+    # if params[:tag].present?
+    #   puts params[:tag]
+    #   @products = Product.tagged_with(params[:tag])
+    # else
+    #   @products = Product.all
+    # end
   end
 
   def show
