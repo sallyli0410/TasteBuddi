@@ -34,7 +34,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:wx_id, :wx_name, :wx_avatar, :phone_number, :seller_complete)
+    params.require(:user).permit(:wx_id, :wx_name, :wx_avatar, :phone_number, :seller_complete, :tag_list)
   end
 
   def render_error
