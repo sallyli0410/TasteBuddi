@@ -78,7 +78,7 @@ products = [
   }
 ]
 
-3.times do
+10.times do
   # create sellers
   u = User.create(
     wx_name: Faker::Name.unique.name,
