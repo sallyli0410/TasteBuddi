@@ -22,11 +22,18 @@ end
 
 # for requests
 json.requests @requests do |request|
-  json.id request.id
+  json.booking_id request.id
   json.booked_time request.time
   # product, buyer, seller
   json.buyer_name request.user.wx_name
+  json.buyer_avatar request.user.wx_avatar
+  json.buyer_wx_id request.user.wx_id
+  json.buyer_id request.user.id
+
   json.product_name request.product.name
+  json.product_id request.product.id
+  json.product_img request.product.img_url
+
   # status and completedness
   json.status request.status
   json.complete request.completed
