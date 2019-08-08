@@ -1,6 +1,6 @@
 json.extract! @product, :id, :name, :description, :location_lat, :location_long, :user_id, :img_url
 
-json.tags product.tag_list
+json.tags @product.tag_list
 
 # seller info
 json.seller do
