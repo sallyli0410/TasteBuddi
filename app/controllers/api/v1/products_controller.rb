@@ -12,7 +12,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
       "
       @products = Product.joins(:ingredients).where(sql_query, query: "%#{params[:query]}%").distinct
     else
-      @products = Product.all
+      @products = Product.all.order(updated_at: :desc)
     end
     # if params[:tag].present?
     #   puts params[:tag]
