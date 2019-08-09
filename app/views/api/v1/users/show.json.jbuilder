@@ -1,7 +1,7 @@
 json.extract! @user, :id, :wx_id, :wx_name, :wx_avatar, :phone_number, :seller_complete
 
 json.products @user.products do |product|
-  json.extract! product, :id, :description, :location_long, :location_lat, :name
+  json.extract! product, :id, :description, :location_long, :location_lat, :name, :img_url
   json.date product.created_at.strftime("%m/%d/%y")
 end
 
