@@ -1,0 +1,32 @@
+@import "config/colors";
+
+.cards{
+  height:300px;
+  background:white;
+  box-shadow: 0px 0px 15px #e8e8e8;
+  border-radius:7px;
+  overflow:hidden;
+}
+
+.card-image {
+  overflow: hidden;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius:7px;
+  border-top-right-radius:7px;
+}
+
+
+.chef-cards{
+  height:100px;
+  background:$tblue;
+  box-shadow: 0px 0px 15px #e8e8e8;
+  padding:10px;
+  border-radius:7px;
+  overflow:hidden;
+}
+
+
+
+
