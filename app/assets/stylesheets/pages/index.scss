@@ -1,7 +1,10 @@
 @import "components/avatar";
 @import "components/banner";
+@import "components/navbar";
 @import "components/cards";
+@import "components/buttons";
 @import "config/colors";
+
 
 .white-bg{
   background:rgba(255,255,255, 0.5);
@@ -15,7 +18,7 @@
 }
 
 h1{
-    background-color: $yellow;
+    background:rgba(237,199,82,0.75);
     width: fit-content;
 }
 

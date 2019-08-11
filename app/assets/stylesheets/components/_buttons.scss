@@ -1,0 +1,12 @@
+@import "config/colors";
+
+.btn-ghost-yellow{
+    border: 2px solid $yellow;
+    color: $yellow;
+    border-radius: 7px;
+    width:120px;
+    &:hover{
+    background:$yellow;
+    color:white;
+    }
+}
