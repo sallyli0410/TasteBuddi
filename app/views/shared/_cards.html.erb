@@ -1,0 +1,7 @@
+      <% @products.each  do |product|  %>
+     <div class="col-3">
+      <div class="cards" background-image:url('<%= image_tag product.img_url %>')>
+        <h2><%= product.name %></h2>
+      </div>
+    </div>
+      <% end %>
