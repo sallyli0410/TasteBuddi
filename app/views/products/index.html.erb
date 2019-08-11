@@ -2,10 +2,35 @@
     <span id="banner-typed-text" style="font-size: 50px; font-weight:bold; color:white;"></span>
     <br>
   </div>
-  <div class="container">
-    <div class="row no-gutters">
-        <%= render "shared/cards" %>
+  <div class="white-bg">
+    <div class="container">
+      <div class="sub-title">
+        <h2>Trending Products</h2>
+        <!--         <span></span> -->
       </div>
-    </div>
+      <div class="row no-gutters">
+       <%= render "shared/cards"%>
+     </div>
+   </div>
+ </div>
+ <div class="container">
+  <div class="sub-title">
+    <h2>Top Chef</h2>
+  </div>
+  <div class="row no-gutters">
+          <% @products.each  do |product|  %>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="chef-cards d-flex flex-row m-2 ">
+          <div class=""
+              <%=image_tag product.img_url, class: "avatar"%>
+          <div class="card-product-info p-2">
+            <h3>chef name</h3>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+ </div>
+</div>
 
 

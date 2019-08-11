@@ -1,7 +1,14 @@
       <% @products.each  do |product|  %>
-     <div class="col-3">
-      <div class="cards" background-image:url('<%= image_tag product.img_url %>')>
-        <h2><%= product.name %></h2>
+      <div class="col-sm-12 col-md-4 col-lg-3">
+        <div class="cards m-2">
+            <%=image_tag product.img_url, class: "card-image" %>
+          <div class="card-product-info p-2">
+            <h3><%= product.name %></h3>
+            <p>Price</p>
+            <p>Rating</p>
+          </div>
+        </div>
       </div>
-    </div>
       <% end %>
+
+
