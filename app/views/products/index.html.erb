@@ -1,0 +1,24 @@
+  <div class="home-banner">
+    <span id="banner-typed-text" style="font-size: 50px; font-weight:bold; color:white;"></span>
+    <br>
+    <%= link_to 'Create a New Cocktail 🍸', new_product_path, class: ' btn btn-ghost' %>
+  </div>
+
+  <div class="container">
+    <div class="row no-gutters">
+      <% @products.each  do |product|  %>
+      <div class="col-4">
+              <h3><%= product.name %></h3>
+              <h6><strong>Instruction</strong></h6>
+              <div class= "instruction">
+                <p><%= product.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+

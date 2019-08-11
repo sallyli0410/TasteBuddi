@@ -1,0 +1,41 @@
+  <div class="home-banner">
+    <span id="banner-typed-text" style="font-size: 50px; font-weight:bold; color:white;"></span>
+    <br>
+    <%= link_to 'Create a New Cocktail 🍸', new_cocktail_path, class: ' btn btn-ghost' %>
+  </div>
+
+  <div class="container">
+    <div class="row no-gutters">
+      <% @cocktails.each  do |cocktail|  %>
+      <div class="col-4">
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3><%= cocktail.name %></h3>
+            </div>
+            <div class="flip-card-back">
+              <%= link_to "", cocktail_path(cocktail), class: 'backflip-click' %>
+              <div class= "ingredients">
+                <h6><strong>Ingredients</strong></h6>
+                  <% cocktail.doses.each do |dose| %>
+                  <li>
+                  <%= dose.description%>
+                  <%= dose.ingredient.name%>
+                </li>
+                  <% end %>
+              </div>
+              <hr>
+              <h6><strong>Instruction</strong></h6>
+              <div class= "instruction">
+                <p><%= cocktail.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
