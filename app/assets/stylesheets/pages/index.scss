@@ -1,5 +1,5 @@
 @import "components/avatar";
-@import "components/banner";
+@import "components/banners";
 @import "components/navbar";
 @import "components/cards";
 @import "components/buttons";
@@ -17,12 +17,4 @@
   width:100%;
 }
 
-h1{
-    background:rgba(237,199,82,0.75);
-    width: fit-content;
-}
-
-h2{
-  z-index: 1;
-}
 

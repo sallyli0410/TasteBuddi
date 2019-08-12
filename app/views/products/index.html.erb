@@ -1,9 +1,9 @@
 <div style="background-image:url('../../assets/images/home-background.jpg');">
   <div class="container">
     <div class="home-banner">
-    <h1>Welcome to Taste Buddi</h1>
-    <h1>Bring Home Authentic</h1>
-    <h1>Local Flavors</h1>
+    <h1 class="yellow-bg">Welcome to Taste Buddi</h1>
+    <h1 class="yellow-bg">Bring Home Authentic</h1>
+    <h1 class="yellow-bg">Local Flavors</h1>
     </div>
   </div>
   <div class="white-bg">
@@ -24,7 +24,7 @@
   <div class="row no-gutters">
     <% @products.each  do |product|  %>
     <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="chef-card d-flex flex-row m-2 ">
+      <div class="blue-card d-flex flex-row m-2 ">
         <%=image_tag product.img_url, class: "avatar"%>
         <div class="card-product-info px-3 py-2">
           <h3>chef name</h3>

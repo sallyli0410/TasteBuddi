@@ -11,6 +11,7 @@
 
 // Your CSS partials
 @import "pages/index";
+@import "pages/show";
 
 // fonts
 
@@ -19,13 +20,20 @@
 }
 
 h1{
-    font-size: 2.75em;
+  font-size: 2.75em;
   font-weight:bold;
+  &.yellow-bg{
+    background:rgba(237,199,82,0.75);
+    width: fit-content;
+  }
 }
 
 h2{
   font-size: 1.75em;
   font-weight:bold;
+  &.blue{
+    color:$tblue;
+  }
 }
 
 h3{
