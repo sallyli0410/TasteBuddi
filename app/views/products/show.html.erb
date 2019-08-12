@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="recipe-banner d-flex justify-content-between">
+    <h1><%= @product.name %></h1>
+    <div class="chef-info">
+      <div class="chef-avatar">
+        <img src="" alt="">
+      </div>
+      <p>Name</p>
+    </div>
+  </div>
+  <div class="row d-flex">
+    <div class="recipe-content col-7">
+     <!--  tags -->
+     <!-- recipe image -->
+     <%= image_tag @product.img_url, class: "product-img" %>
+     <!-- rating -->
+     <div class="content-section py-3">
+       <h2 class="blue">Rating</h2>
+     </div>
+     <!-- description -->
+     <div class="content-section py-3">
+       <h2 class="blue">Description</h2>
+       <p><%= @product.description %></p>
+     </div>
+     <!-- ingredients -->
+     <div class="content-section py-3">
+       <h2 class="blue">Ingredients</h2>
+       <%  @product.ingredients. each do |i| %>
+       <ul>
+         <li><%= i.name %></li>
+       </ul>
+       <% end %>
+     </div>
+     <!-- location -->
+     <div class="content-section py-3">
+       <h2 class="blue">Location</h2>
+     </div>
+     <!-- reviews -->
+     <div class="content-section py-3">
+       <h2 class="blue">Reviews</h2>
+       <% @product.reviews each do |r| %>
+       <div class="blue-card">
+
+       </div>
+       <% end %>
+     </div>
+   </div>
+   <div class="purchase-form col-5">
+    <h2>Price: $$$$</h2>
+
+
+
+  </div>
+</div>
+</div>
+
+

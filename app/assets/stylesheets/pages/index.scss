@@ -1,7 +1,10 @@
 @import "components/avatar";
-@import "components/banner";
+@import "components/banners";
+@import "components/navbar";
 @import "components/cards";
+@import "components/buttons";
 @import "config/colors";
+
 
 .white-bg{
   background:rgba(255,255,255, 0.5);
@@ -14,7 +17,4 @@
   width:100%;
 }
 
-h2{
-  z-index: 1;
-}
 

@@ -1,13 +1,17 @@
-  <div class="home-banner">
-    <span id="banner-typed-text" style="font-size: 50px; font-weight:bold; color:white;"></span>
-    <br>
+<div style="background-image:url('../../assets/images/home-background.jpg');">
+  <div class="container">
+    <div class="home-banner">
+    <h1 class="yellow-bg">Welcome to Taste Buddi</h1>
+    <h1 class="yellow-bg">Bring Home Authentic</h1>
+    <h1 class="yellow-bg">Local Flavors</h1>
+    </div>
   </div>
   <div class="white-bg">
     <div class="container">
       <div class="sub-title">
         <h2>Trending Products</h2>
         <!--         <span></span> -->
-      </div>
+      </div>`
       <div class="row no-gutters">
        <%= render "shared/cards"%>
      </div>
@@ -15,22 +19,21 @@
  </div>
  <div class="container">
   <div class="sub-title">
-    <h2>Top Chef</h2>
+    <h2>Top Chefs</h2>
   </div>
   <div class="row no-gutters">
-          <% @products.each  do |product|  %>
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="chef-cards d-flex flex-row m-2 ">
-          <div class=""
-              <%=image_tag product.img_url, class: "avatar"%>
-          <div class="card-product-info p-2">
-            <h3>chef name</h3>
-          </div>
+    <% @products.each  do |product|  %>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="blue-card d-flex flex-row m-2 ">
+        <%=image_tag product.img_url, class: "avatar"%>
+        <div class="card-product-info px-3 py-2">
+          <h3>chef name</h3>
         </div>
       </div>
-      <% end %>
-
- </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 </div>
 
 

@@ -18,14 +18,24 @@
 }
 
 
-.chef-cards{
+.blue-card {
   height:100px;
   background:$tblue;
   box-shadow: 0px 0px 15px #e8e8e8;
   padding:10px;
   border-radius:7px;
   overflow:hidden;
+  img{
+    flex-basis: 25%;
+  }
+  & .card-product-info{
+    flex-basis: 70%;
+    h3{
+      line-height: 3;
+    }
+  }
 }
+
 
 
 

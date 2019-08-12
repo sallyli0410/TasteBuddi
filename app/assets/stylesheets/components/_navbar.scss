@@ -1,18 +1,24 @@
-.navbar-lewagon {
+.navbar-buddi {
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
+  padding: 2% 10%;
 }
 
-.navbar-lewagon-white {
+.navbar-buddi-white {
   background-color: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-buddi .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.nav-item{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-buddi .navbar-brand img {
   width: 40px;
 }
 
