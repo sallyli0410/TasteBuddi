@@ -10,7 +10,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
         OR products.description @@ :query \
         OR ingredients.name @@ :query
       "
-      @products = Product.joins(:ingredients).where(sql_query, query: "%#{params[:query]}%").distinct
+      @products = Product.left_joins(:ingredients).where(sql_query, query: "%#{params[:query]}%").distinct
     else
       @products = Product.all.order(updated_at: :desc)
     end
