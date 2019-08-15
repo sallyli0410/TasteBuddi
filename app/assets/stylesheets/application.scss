@@ -1,49 +1,49 @@
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
+// // Graphical variables
+// @import "config/fonts";
+// @import "config/colors";
+// @import "config/bootstrap_variables";
 
-// External libraries
+// // External libraries
 
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// @import "bootstrap/scss/bootstrap";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 
-// Your CSS partials
-@import "pages/index";
-@import "pages/show";
+// // Your CSS partials
+// @import "pages/index";
+// @import "pages/show";
 
-// fonts
+// // fonts
 
 .container{
   padding: 2% 0%;
 }
 
-h1{
-  font-size: 2.75em;
-  font-weight:bold;
-  &.yellow-bg{
-    background:rgba(237,199,82,0.75);
-    width: fit-content;
-  }
-}
+// h1{
+//   font-size: 2.75em;
+//   font-weight:bold;
+//   &.yellow-bg{
+//     background:rgba(237,199,82,0.75);
+//     width: fit-content;
+//   }
+// }
 
-h2{
-  font-size: 1.75em;
-  font-weight:bold;
-  &.blue{
-    color:$tblue;
-  }
-}
+// h2{
+//   font-size: 1.75em;
+//   font-weight:bold;
+//   &.blue{
+//     color:$tblue;
+//   }
+// }
 
-h3{
-  font-size:1.25em;
-  margin:0;
-}
+// h3{
+//   font-size:1.25em;
+//   margin:0;
+// }
 
-p{
-  font-size:1em;
-  margin:0;
-}
+// p{
+//   font-size:1em;
+//   margin:0;
+// }
 
 
