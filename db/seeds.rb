@@ -243,7 +243,7 @@ products = [
 10.times do |i|
   # create sellers
   u = User.create(
-    wx_name: Faker::Name.unique.name,
+    wx_name: Faker::Name.name,
     wx_avatar: "",
     phone_number: Faker::Number.number(digits: 11),
     seller_complete: true
